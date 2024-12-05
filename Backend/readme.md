@@ -43,3 +43,35 @@ Logs in an existing user.
     - `lastname` (string): Last name of the user.
   - `email` (string): Valid email address of the user.
 - `token` (String): jwt token
+
+## User Profile
+
+### GET `/user/profile`
+
+Retrieves the profile of the authenticated user.
+
+#### Headers
+
+- **Authorization**: Bearer token.
+
+#### Example Response
+
+- `user`: (object)
+  - `fullname`: (object)
+    - `firstname` (string): First name of the user.
+    - `lastname` (string): Last name of the user.
+  - `email` (string): Valid email address of the user.
+
+## User Logout
+
+### POST `/user/logout`
+
+Logs out the authenticated user.
+
+#### Headers
+
+- **Authorization**: Bearer token.
+
+#### Example Response
+
+- `message` (string): "Logged out successfully."
