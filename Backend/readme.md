@@ -23,3 +23,23 @@ Registers a new user.
 - `email` (string): Valid email address of the user.
 - `password` (string): Password for the account (minimum 6 characters).
 - `token` (String): jwt token
+
+## User Login
+
+### POST `/user/login`
+
+Logs in an existing user.
+
+#### Request Body
+
+- **email** (string, required): Valid email address of the user.
+- **password** (string, required): Password for the account (minimum 6 characters).
+
+#### Example Response
+
+- `user`: (object)
+  - `fullname`: (object)
+    - `firstname` (string): First name of the user.
+    - `lastname` (string): Last name of the user.
+  - `email` (string): Valid email address of the user.
+- `token` (String): jwt token
